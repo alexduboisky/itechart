@@ -1,0 +1,120 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top,#ebf5ff,#99b8f6);
+    margin: 0;
+    line-height: 1;
+    font-family: 'Open Sans';
+    position: relative;
+}
+.container{
+    width: 100%;
+    max-width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Order list */
+.order-list{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+    border-right: #99b8f646 1px solid;
+}
+.order-list-header{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 20px;
+}
+.order-list-header div{
+    width: 100%;
+    text-align: center;
+}
+.order-list-form{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.order-list-form input{
+    width: 95%;
+}
+.order-list-items{
+    width: 100%;
+    overflow: auto;
+    height: calc(100vh - 50px);
+    
+}
+.order-list-footer{
+    position: absolute;
+    top: calc(100vh - 50px);
+    width: 100%;
+    height: 50px;
+    background-color: #223343;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.order-list-footer div{
+    color: cornflowerblue;
+    margin: auto 15px;
+    cursor: pointer;
+}
+
+
+/* Order information */
+
+.order-information{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+}
+.order-information-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #99b8f646;
+}
+.order-information-header .order-list-button{
+    position: absolute;
+    left: 10px;
+    display: none;
+    cursor: pointer;
+}
+.order-information-footer{
+    position: absolute;
+    top: calc(100vh - 50px);
+    width: 100%;
+    height: 50px;
+    background-color: #223343;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.order-information-footer div{
+    color: cornflowerblue;
+    margin: auto 15px;
+    cursor: pointer;
+}
+
+/* Media */
+
+@media screen and (max-width: 1000px) {
+    .order-list{
+        position: absolute;
+        top: -300px;
+        transition: top .2s;
+    }
+    .order-information-header .order-list-button{
+        display: flex;
+        z-index: 1;
+    }
+   }
